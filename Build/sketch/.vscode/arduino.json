@@ -1,0 +1,7 @@
+#line 1 "C:\\User\\Pressure Sensor\\AutoCutoff\\.vscode\\arduino.json"
+{
+    "sketch": "AutoCutoff.ino",
+    "board": "arduino:avr:uno",
+    "output": "C:/User/Pressure Sensor/AutoCutoff/Build",
+    "port": "COM6"
+}

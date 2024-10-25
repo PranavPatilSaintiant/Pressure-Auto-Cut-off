@@ -1,0 +1,6 @@
+{
+    "sketch": "AutoCutoff.ino",
+    "board": "arduino:avr:uno",
+    "output": "C:/User/Pressure Sensor/AutoCutoff/Build",
+    "port": "COM6"
+}

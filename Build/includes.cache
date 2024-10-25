@@ -1,0 +1,27 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\conta\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\conta\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\standard"
+  },
+  {
+    "Sourcefile": "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\AutoCutoff.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\Oscillometry.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\PeakDetection.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]
