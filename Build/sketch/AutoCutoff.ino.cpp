@@ -27,11 +27,11 @@ int peak_status;
 
 #line 26 "C:\\User\\Pressure Sensor\\AutoCutoff\\AutoCutoff.ino"
 void setup();
-#line 43 "C:\\User\\Pressure Sensor\\AutoCutoff\\AutoCutoff.ino"
+#line 44 "C:\\User\\Pressure Sensor\\AutoCutoff\\AutoCutoff.ino"
 void loop();
-#line 87 "C:\\User\\Pressure Sensor\\AutoCutoff\\AutoCutoff.ino"
-int getADC();
 #line 102 "C:\\User\\Pressure Sensor\\AutoCutoff\\AutoCutoff.ino"
+int getADC();
+#line 117 "C:\\User\\Pressure Sensor\\AutoCutoff\\AutoCutoff.ino"
 int ADCtoPressure(int ADC_Val);
 #line 26 "C:\\User\\Pressure Sensor\\AutoCutoff\\AutoCutoff.ino"
 void setup() {
@@ -45,13 +45,18 @@ void setup() {
   //Peak Detector Configuration
 
   //Max Peak Config
-  peakDetection.begin(4, 2, 0.6);
+  // peakDetection.begin(4, 2, 0.6);
+  peakDetection.begin(6, 3, 0.6);
 
   //Min Peak Config
   // peakDetection.begin(8, 4, 0.8);
 }
 
 void loop() {
+
+
+
+  
   digitalWrite(MOTOR_PIN,HIGH);
   while(getADC()<487){
     Serial.println(getADC());
@@ -60,9 +65,9 @@ void loop() {
   while(getADC()<850 && !stop_press)
   {
     // ADC_Average = BUFFER/NUM_SAMPLES;
-    ADC_Average = getADC();
+    // ADC_Average = getADC();
     //Add Current Pressure Reading to Peak Detector Window
-    peakDetection.add(ADC_Average);
+    peakDetection.add(getADC());
 
     //State of Current Data Point
     // int peak = peakDetection.getPeak();
@@ -71,18 +76,23 @@ void loop() {
     if(peakDetection.getPeak() == 1)
     { 
       int p_curr = millis();
-      if((p_curr - p_last)>1200){
+      Serial.println(p_curr - p_last);
+      if((p_curr - p_last)>1200)
+      {
         stop_press = 1;
         Serial.println("Auto Cut-off at: ");
         Serial.print(ADCtoPressure(getADC()));
+        digitalWrite(MOTOR_PIN,LOW);
+        digitalWrite(VALVE_PIN,LOW);
         break;
       }
       p_last = p_curr;
-      Serial.println("Peak");
-      while(peakDetection.getPeak() > 0){
-        peakDetection.add(getADC());
-        Serial.println(getADC());
-      }
+      Serial.print("Peak ");
+      // while(peakDetection.getPeak() > 0){
+      //   Serial.println("Repeating");
+      //   peakDetection.add(getADC());
+      //   Serial.println(getADC());
+      // }
     }
     else
     {
@@ -92,6 +102,11 @@ void loop() {
   }
   digitalWrite(MOTOR_PIN,LOW);
   digitalWrite(VALVE_PIN,LOW);
+
+
+
+
+
   while(1){}
 }
 

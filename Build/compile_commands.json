@@ -53,11 +53,11 @@
    "-DARDUINO_ARCH_AVR",
    "-IC:\\Users\\conta\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino",
    "-IC:\\Users\\conta\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\standard",
-   "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\PeakDetection.cpp",
+   "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\Oscillometry.cpp",
    "-o",
-   "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\PeakDetection.cpp.o"
+   "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\Oscillometry.cpp.o"
   ],
-  "file": "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\PeakDetection.cpp"
+  "file": "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\Oscillometry.cpp"
  },
  {
   "directory": "c:\\User\\Pressure Sensor\\AutoCutoff",
@@ -83,10 +83,10 @@
    "-DARDUINO_ARCH_AVR",
    "-IC:\\Users\\conta\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino",
    "-IC:\\Users\\conta\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\standard",
-   "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\Oscillometry.cpp",
+   "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\PeakDetection.cpp",
    "-o",
-   "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\Oscillometry.cpp.o"
+   "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\PeakDetection.cpp.o"
   ],
-  "file": "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\Oscillometry.cpp"
+  "file": "C:\\User\\Pressure Sensor\\AutoCutoff\\Build\\sketch\\PeakDetection.cpp"
  }
 ]
